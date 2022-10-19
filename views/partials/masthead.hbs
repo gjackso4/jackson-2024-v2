@@ -1,0 +1,35 @@
+<div class="masthead">
+  <div class="text-block">
+    <h2>TOGETHER, WE <br> WILL DREAM BIG <br> AND FIGHT HARD</h2>
+    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</span>
+  </div>
+
+  <div class="watch">
+    <span>Meet Derrick</span>
+    <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/wK8glFZuQw8" data-target="#myModal">Watch <i class="fas fa-play-circle" aria-hidden="true"></i></a>
+  </div>
+
+  <img src="./images/masthead.jpg">
+</div>
+
+<script>
+  $(document).ready(function() {
+
+  // Gets the video src from the data-src on each button
+
+  var $videoSrc;  
+  $('.video-btn').click(function() {
+      $videoSrc = $(this).data( "src" );
+      $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+      $(".modal").addClass('show').show();
+  });
+
+  $('.close, .modal').click(function(){
+    $("#video").attr('src', '');
+    $(".modal").removeClass('show').hide();
+  });
+
+// document ready  
+});
+
+</script>
