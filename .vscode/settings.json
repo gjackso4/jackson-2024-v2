@@ -1,0 +1,8 @@
+{
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}",
+    ".vscode{,/**}"
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/8a79455d-7651-42db-aee7-ab82ebc22488/AppServices/subscriptions/8a79455d-7651-42db-aee7-ab82ebc22488/resourceGroups/nodejs/providers/Microsoft.Web/sites/jackson4sheriff",
+  "appService.deploySubpath": "."
+}

@@ -4,22 +4,24 @@
   h2 {
     font-family: 'News Cycle', sans-serif;
     font-weight: 700;
-    font-size: 3.35vw;
+    //font-size: 3.35vw;
+    font-size: 51px;
     letter-spacing: .75px;
     line-height: 1;
   }
 
   .text-block {
     position: absolute;
-    max-width: 375px;
+    max-width: 420px;
     color: #fff;
     font-size: 26px;
-    top: 30%;
-    left: 14vw;
+    top: 28%;
+    left: 22%;
     line-height: .9;
 
     span {
-      font-size: 1.125vw;
+      //font-size: 1.125vw;
+      font-size: 18px;
       font-family: 'Noto Serif', sans-serif;
     }
   }
