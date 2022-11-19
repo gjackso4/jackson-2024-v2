@@ -1,11 +1,21 @@
-.meet-derrick .why-running--inner--copy p {
-  margin-bottom: 1rem !important;
-  line-height: 1.5;
-  font-size: 18px;
-  text-align: justify; }
-
-.meet-derrick .why-running--container .left-container {
-  top: 8%; }
+.meet-derrick--container {
+  background-image: url("../images/about-page-img-3.jpg");
+  background-size: cover;
+  background-color: #f7f7f7;
+  padding: 7rem 5rem;
+  background-repeat: no-repeat;
+  background-position: bottom; }
   @media (max-width: 992px) {
-    .meet-derrick .why-running--container .left-container {
-      top: 0; } }
+    .meet-derrick--container {
+      padding: 5rem 2rem; } }
+  .meet-derrick--container .left {
+    width: 55%; }
+    @media (max-width: 992px) {
+      .meet-derrick--container .left {
+        width: 100%; } }
+    .meet-derrick--container .left a {
+      color: #000;
+      text-decoration: underline; }
+    .meet-derrick--container .left p {
+      padding-bottom: 1rem;
+      text-align: left; }

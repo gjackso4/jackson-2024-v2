@@ -47,7 +47,7 @@ const sliders = document.querySelectorAll('.slide-in');
 
 
 const appearOptions = {
-  threshold: .5
+  threshold: .25
 };
 
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {

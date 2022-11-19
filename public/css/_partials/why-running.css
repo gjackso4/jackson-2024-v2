@@ -5,13 +5,16 @@
   display: flex; }
   @media (max-width: 992px) {
     .why-running {
-      padding-bottom: 2rem; } }
+      padding-bottom: 2rem;
+      margin-top: -48vw; } }
   .why-running--container {
     position: relative;
     margin: 0 auto;
     width: 100%;
     display: flex;
-    justify-content: end; }
+    justify-content: start;
+    background-image: url("../images/join_movement_v3.jpg");
+    background-size: cover; }
     @media (max-width: 1200px) {
       .why-running--container {
         flex-direction: column-reverse;
@@ -28,64 +31,27 @@
       .why-running--container .fieldset > div {
         width: 100%; }
     .why-running--container .left {
-      position: absolute;
       width: 45%;
-      left: 4%; }
-      @media (max-width: 1700px) {
+      margin-left: 5rem;
+      padding-bottom: 2rem; }
+      @media (max-width: 992px) {
         .why-running--container .left {
-          left: 5%;
-          top: 1vw; } }
-      @media (max-width: 1300px) {
-        .why-running--container .left {
-          width: 48%;
-          left: 2%; } }
-      @media (max-width: 1200px) {
-        .why-running--container .left {
-          position: relative;
           width: 100%;
-          max-width: none;
-          left: 0; } }
+          padding: 2rem;
+          margin-left: 0; } }
       .why-running--container .left-container {
         position: relative;
         color: #363636;
-        padding: 50px 72px;
         margin-top: 12%; }
-        @media (max-width: 1700px) {
+        @media (max-width: 992px) {
           .why-running--container .left-container {
-            padding: 1rem 2rem 1rem 1rem;
-            margin-top: 12%; } }
-        @media (max-width: 1350px) {
-          .why-running--container .left-container {
-            padding: 1rem 2rem 1rem 1rem;
-            margin-top: 4%; } }
-        @media (max-width: 1200px) {
-          .why-running--container .left-container {
-            margin-top: 0;
-            padding: 27px 35px; } }
+            padding: 0; } }
       .why-running--container .left label {
         margin-bottom: .25rem;
         display: block;
         font-family: Open Sans; }
         .why-running--container .left label span {
           font-size: 12px; }
-    .why-running--container .right {
-      width: 100%; }
-      @media (max-width: 1580px) {
-        .why-running--container .right img {
-          width: 205vh;
-          margin-left: -13vw; } }
-      @media (max-width: 1380px) {
-        .why-running--container .right img {
-          width: 205vh;
-          margin-left: -22vw; } }
-      @media (max-width: 1280px) {
-        .why-running--container .right img {
-          width: 205vh;
-          margin-left: -30vw; } }
-      @media (max-width: 992px) {
-        .why-running--container .right img {
-          width: 100%;
-          margin-left: 0; } }
   .why-running--inner--copy p, .why-running #success--copy p {
     margin-bottom: 0 !important;
     line-height: 1.5;

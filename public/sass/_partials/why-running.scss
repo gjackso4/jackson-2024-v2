@@ -7,6 +7,7 @@
 
   @media (max-width: 992px) {
     padding-bottom: 2rem;
+    margin-top: -48vw;
   }
 
 
@@ -17,7 +18,10 @@
 
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: start;
+    background-image: url('../images/join_movement_v3.jpg');
+    background-size: cover;
+
 
     @media (max-width: 1200px){
       flex-direction: column-reverse;
@@ -40,47 +44,26 @@
     }
 
     .left {
-      position: absolute;
+      // position: absolute;
       width: 45%;
-      left: 4%;
+      margin-left: 5rem;
+      padding-bottom: 2rem;
 
-      @media (max-width: 1700px){
-        left: 5%;
-        top: 1vw
-      }
-      @media (max-width: 1300px){
-        width: 48%;
-        left: 2%;
-      }
-      
-
-      @media (max-width: 1200px){
-        position: relative;
+      @media (max-width: 992px) {
         width: 100%;
-        max-width: none;
-        left: 0;
+        padding: 2rem;
+        margin-left: 0;
       }
 
       &-container {
         position: relative;
-
         color: #363636;
 
-        padding: 50px 72px;
         margin-top: 12%;
 
-        @media (max-width: 1700px){
-          padding: 1rem 2rem 1rem 1rem;
-          margin-top: 12%;
-        }
-        @media (max-width: 1350px){
-          padding: 1rem 2rem 1rem 1rem;
-          margin-top: 4%;
-        }
+        @media (max-width: 992px){
 
-        @media (max-width: 1200px){
-          margin-top: 0;
-          padding: 27px 35px;
+          padding: 0;
         }
 
       }
@@ -96,30 +79,6 @@
       }
     }
 
-    .right{
-      width: 100%;
-
-
-      img {
-        @media (max-width: 1580px){
-        width: 205vh;
-        margin-left: -13vw;
-        }
-
-        @media (max-width: 1380px){
-          width: 205vh;
-          margin-left: -22vw;
-          }
-          @media (max-width: 1280px){
-            width: 205vh;
-            margin-left: -30vw;
-            }
-            @media (max-width: 992px){
-              width: 100%;
-              margin-left: 0;
-              }
-      }
-    }
   }
 
   &--inner, #success {
