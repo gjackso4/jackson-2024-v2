@@ -1,0 +1,11 @@
+.meet-derrick .why-running--inner--copy p {
+  margin-bottom: 1rem !important;
+  line-height: 1.5;
+  font-size: 18px;
+  text-align: justify; }
+
+.meet-derrick .why-running--container .left-container {
+  top: 8%; }
+  @media (max-width: 992px) {
+    .meet-derrick .why-running--container .left-container {
+      top: 0; } }

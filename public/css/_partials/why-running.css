@@ -1,0 +1,172 @@
+.why-running {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  display: flex; }
+  @media (max-width: 992px) {
+    .why-running {
+      padding-bottom: 2rem; } }
+  .why-running--container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: end; }
+    @media (max-width: 1200px) {
+      .why-running--container {
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0; } }
+    .why-running--container .sig {
+      font-family: 'Allison', cursive;
+      font-size: 4rem;
+      padding: 1rem 0; }
+    .why-running--container .fieldset {
+      display: flex;
+      margin-bottom: 1rem;
+      gap: 12px; }
+      .why-running--container .fieldset > div {
+        width: 100%; }
+    .why-running--container .left {
+      position: absolute;
+      width: 45%;
+      left: 4%; }
+      @media (max-width: 1700px) {
+        .why-running--container .left {
+          left: 5%;
+          top: 1vw; } }
+      @media (max-width: 1300px) {
+        .why-running--container .left {
+          width: 48%;
+          left: 2%; } }
+      @media (max-width: 1200px) {
+        .why-running--container .left {
+          position: relative;
+          width: 100%;
+          max-width: none;
+          left: 0; } }
+      .why-running--container .left-container {
+        position: relative;
+        color: #363636;
+        padding: 50px 72px;
+        margin-top: 12%; }
+        @media (max-width: 1700px) {
+          .why-running--container .left-container {
+            padding: 1rem 2rem 1rem 1rem;
+            margin-top: 12%; } }
+        @media (max-width: 1350px) {
+          .why-running--container .left-container {
+            padding: 1rem 2rem 1rem 1rem;
+            margin-top: 4%; } }
+        @media (max-width: 1200px) {
+          .why-running--container .left-container {
+            margin-top: 0;
+            padding: 27px 35px; } }
+      .why-running--container .left label {
+        margin-bottom: .25rem;
+        display: block;
+        font-family: Open Sans; }
+        .why-running--container .left label span {
+          font-size: 12px; }
+    .why-running--container .right {
+      width: 100%; }
+      @media (max-width: 1580px) {
+        .why-running--container .right img {
+          width: 205vh;
+          margin-left: -13vw; } }
+      @media (max-width: 1380px) {
+        .why-running--container .right img {
+          width: 205vh;
+          margin-left: -22vw; } }
+      @media (max-width: 1280px) {
+        .why-running--container .right img {
+          width: 205vh;
+          margin-left: -30vw; } }
+      @media (max-width: 992px) {
+        .why-running--container .right img {
+          width: 100%;
+          margin-left: 0; } }
+  .why-running--inner--copy p, .why-running #success--copy p {
+    margin-bottom: 0 !important;
+    line-height: 1.5;
+    text-align: justify; }
+    @media (max-width: 1200px) {
+      .why-running--inner--copy p, .why-running #success--copy p {
+        text-align: left !important; } }
+  @media (max-width: 992px) {
+    .why-running--inner form, .why-running #success form {
+      flex-direction: column;
+      width: 100%; }
+      .why-running--inner form input, .why-running #success form input {
+        margin-right: 0;
+        margin-top: .5rem; } }
+  .why-running--inner h2, .why-running #success h2 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+    line-height: 1.15;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700; }
+  .why-running--inner p, .why-running #success p {
+    font-size: 18px;
+    margin-bottom: 0; }
+  .why-running--inner #fname, .why-running #success #fname {
+    margin-right: 1rem; }
+  .why-running--inner input[type="text"],
+  .why-running--inner input[type="date"],
+  .why-running--inner input[type="datetime"],
+  .why-running--inner input[type="email"],
+  .why-running--inner input[type="number"],
+  .why-running--inner input[type="search"],
+  .why-running--inner input[type="time"],
+  .why-running--inner input[type="url"],
+  .why-running--inner textarea,
+  .why-running--inner select, .why-running #success input[type="text"],
+  .why-running #success input[type="date"],
+  .why-running #success input[type="datetime"],
+  .why-running #success input[type="email"],
+  .why-running #success input[type="number"],
+  .why-running #success input[type="search"],
+  .why-running #success input[type="time"],
+  .why-running #success input[type="url"],
+  .why-running #success textarea,
+  .why-running #success select {
+    font-family: Open Sans;
+    font-weight: 800;
+    color: #ffffff;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    transition: .35s;
+    width: 100%;
+    background: transparent;
+    box-sizing: border-box; }
+  .why-running--inner input[type="submit"],
+  .why-running--inner input[type="button"], .why-running #success input[type="submit"],
+  .why-running #success input[type="button"] {
+    margin-top: 2rem;
+    border-style: none;
+    font-family: Open Sans;
+    font-size: 18px;
+    width: 100%;
+    background: #185e85;
+    text-align: center;
+    padding: 12px 24px;
+    color: #fffcf3;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 7px; }
+    .why-running--inner input[type="submit"]:hover,
+    .why-running--inner input[type="button"]:hover, .why-running #success input[type="submit"]:hover,
+    .why-running #success input[type="button"]:hover {
+      background: #11435d; }
+  .why-running #error {
+    margin-bottom: 1rem;
+    font-family: Open Sans;
+    font-size: 14px; }
+  .why-running #success {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 40%; }

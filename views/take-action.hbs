@@ -1,0 +1,213 @@
+
+
+<div class="take-action page">
+  <div class="take-action--inner">
+
+    <h2>Join the Movement</h2>
+
+    <p>For over twenty years, Derrick has dedicated his life to helping others. Now, he’s asking for our help. Join the movement!</p>
+
+    <p id="error" class="error">Error: Please enter an email Address.</p>
+    <form id="take-action-form" action="/subscribe" method="POST">
+      
+
+<div class="name">
+        <label>Name <span></span></label>
+        <input type="text" name="fname" id="fname" >
+      </div> 
+<div class="email">
+      <label>Email <span></span></label>
+      <input type="email" name="email" id="email" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+</div>
+
+<div class="address">
+        <label>Street Address <span></span></label>
+      <input type="text" name="address" id="address" >
+</div>
+
+<div class="city">
+      <label>City <span></span></label>
+      <input type="text" name="city" id="city" >
+</div>
+
+<div class="zip">
+      <label>Postal Code <span></span></label>
+      <input type="number" name="zip" id="zip" >
+</div>
+
+<div class="state">
+      <label>State <span></span></label>
+      <select id="state">
+        <option value="XX">Select State</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+      </select>
+</div>
+
+<div class="phone">
+      <label>Phone <span></span></label>
+      <input type="phone" name="phone" id="phone" >
+</div>
+
+
+
+
+
+
+    <div class="checkbox-set set1">
+      <div>
+            <input type="checkbox" id="CHKVOLUNTE"  class="chkvolunte checkbox" name="CHKVOLUNTE" value="false">
+            <label for="CHKVOLUNTE"> Volunteer wherever needed!</label><br>
+      </div>
+      <div>
+            <input type="checkbox" id="chkemailupdate" class="checkbox" name="checkemailupdate" value="false">
+            <label for="checkemailupdate"> Sign up for email updates</label><br>
+      </div>
+      <div>
+            <input type="checkbox" id="chkknockdoor" class="checkbox" name="chkknockdoor" value="false">
+            <label for="chkknockdoor">Knock on doors - talk to voters to pass out literature</label><br>
+      </div>
+      <div>
+            <input type="checkbox" id="chkphonecalls" class="checkbox" name="chkphonecalls" value="false">
+            <label for="chkphonecalls">Make phone calls to votes</label><br>
+      </div>
+    </div>
+    <div class="checkbox-set set2">
+      <div>
+            <input type="checkbox" id="chkhelpmailing" class="checkbox" name="chkhelpmailing" value="false">
+            <label for="chkhelpmailing">Help with a mailing</label><br>
+      </div>
+      <div>
+            <input type="checkbox" id="chkhostparty" class="checkbox" name="chkhostparty" value="false">
+            <label for="chkhostparty">Host House Party</label><br>
+      </div>
+      <div>
+            <input type="checkbox" id="chkintern" class="checkbox" name="chkintern" value="false">
+            <label for="chkintern">Intern on campaign</label><br>
+      </div>
+      <div>
+            <input type="checkbox" id="chkyardsign" class="checkbox" name="chkyardsign" value="false">
+            <label for="chkyardsign">Request a yard sign</label><br>
+      </div>
+    </div>
+      
+
+      <input type="submit" value="Sign Up" class="button" id="cta">
+    </form>
+
+    <div id="success">
+      <p>Confirmation Email is on the way.</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+{{> donate-widget}}
+
+<script>
+  let cta = document.getElementById('cta');
+  let email = document.getElementById('email').value;
+  let name2 = document.getElementById('fname').value;
+  let address = document.getElementById('address').value;
+  let zip = document.getElementById('zip').value;
+  let city = document.getElementById('city').value;
+  let state = document.getElementById('state').value;
+  let phone = document.getElementById('phone').value;
+  let checkboxs = document.querySelectorAll('.checkbox');
+  let error = document.getElementById('error');
+  let success = document.getElementById('success');
+  let signup = document.getElementById('take-action-form');
+
+  checkboxs.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        this.value = true;
+      } else {
+       this.value = false;
+      }
+    })
+  })
+
+
+  cta.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (this.email.value == null || this.email.value == "") {
+      error.classList.add('errorAnim');
+    } else {
+      let fetchData = {
+        method: 'POST',
+        body: JSON.stringify({email: this.email.value, name: this.fname.value, address: this.address.value, zip: this.zip.value, city: this.city.value,state: this.state.value, phone: this.phone.value, chkvolunte: this.CHKVOLUNTE.value, chkemailupdate: this.chkemailupdate.value, chkknockdoor: this.chkknockdoor.value, chkphonecalls: this.chkphonecalls.value, chkhelpmailing: this.chkhelpmailing.value, chkhostparty: this.chkhostparty.value, chkintern: this.chkintern.value ,chkyardsign: this.chkyardsign.value}),
+        headers: {"Content-Type": "application/json"}
+      }
+
+      console.log(fetchData);
+
+      fetch ('/subscribe', fetchData)
+        .then (res => {
+          if (res.ok) {
+            signup.classList.add('fadeout');
+            setTimeout(() => {
+              success.classList.add('fadein');
+              signup.style.display = 'none';
+            }, 1000)
+          } else {
+            error.classList.add('errorAnim');
+          }
+        })
+
+    }
+  });
+
+</script>

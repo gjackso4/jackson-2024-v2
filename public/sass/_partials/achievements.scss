@@ -1,0 +1,61 @@
+.achievements {
+  &--copy {
+    margin: 5rem auto;
+    max-width: 1200px;
+
+    h2 {
+      font-size: 2.5vw;
+      text-align: center;
+      margin-bottom: 1.5rem;
+  
+      font-weight: 500;
+      color: #363636;
+    }
+  
+    p {
+      font-size: 1.25vw;
+      line-height: 1.25;
+      text-align: center;
+      color: #363636;
+    }
+  }
+
+
+  .blue{
+    background-color: blue;
+  }
+  .turqoise{
+    background-color: red;
+  }
+  .green{
+    background-color: green;
+  }
+  
+  #pinContainer {
+    scroll-behavior: smooth;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      -webkit-perspective: 1000;
+              perspective: 1000;
+    }
+    #slideContainer {
+      width: 400%; /* to contain 4 panels, each with 100% of window width */
+      height: 100%;
+    }
+    .panel {
+      height: 100%;
+      width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
+      float: left;
+      
+      b{
+            font-size: 15px;
+      color: white;
+      position: relative;
+      display: block;
+      height: 0;
+      overflow: visible;
+      top: 50%;
+      }
+    }
+}

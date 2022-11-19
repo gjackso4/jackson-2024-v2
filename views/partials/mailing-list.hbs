@@ -1,0 +1,75 @@
+<div class="mailing-list ">
+
+  <div class="mailing-list--container">
+    <div class="left slide-in from-left">
+      <div class="left-container">
+      <div id="mailing-list--inner" class="mailing-list--inner">
+        <div class="mailing-list--inner--copy">
+          <h2>Join The Movement! Help continue the progress we've made. </h2>
+        </div>
+
+        <form action="/subscribe" method="POST">
+          <p id="error" class="error">Error: Please enter an email Address</p>
+          <div class="fieldset">
+            <div>
+              <label>Name <span>(optional)</span></label>
+              <input type="text" name="fName" id="fname" >
+            </div>
+            <div>
+              <label>Email address</label>
+              <input type="email" name="email" id="email" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+            </div>
+          </div>
+
+
+          <input type="submit" value="Join The Movement" class="button" id="cta">
+        </form>
+      </div>
+
+      <div id="success">
+        <p>Confirmation Email is on the way.<br><br>Find more ways to <a href="/take-action">help</a> elect Derrick Jackson Sheriff of Washtenaw County.</p>
+      </div>
+     </div>
+    </div>
+
+    <div class="right">
+      <img src="./images/mailing-list-img-v2.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<script>
+  let cta = document.getElementById('cta');
+  let email = document.getElementById('email').value;
+  let error = document.getElementById('error');
+  let success = document.getElementById('success');
+  let signup = document.getElementById('mailing-list--inner');
+
+  cta.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (this.email.value == null || this.email.value == "") {
+      error.classList.add('errorAnim');
+    } else {
+      let fetchData = {
+        method: 'POST',
+        body: JSON.stringify({email: this.email.value}),
+        headers: {"Content-Type": "application/json"}
+      }
+
+      fetch ('/subscribe', fetchData)
+        .then (res => {
+          if (res.ok) {
+            signup.classList.add('fadeout');
+            setTimeout(() => {
+              success.classList.add('fadein');
+              //signup.style.display = 'none';
+            }, 1000)
+          } else {
+            error.classList.add('errorAnim');
+          }
+        })
+    }
+  });
+
+</script>

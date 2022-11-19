@@ -1,125 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
-  <title>Derrick Jackson 4 Sheriff</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <meta property="og:title" content="Jackson 4 Sheriff">
+    <meta property="og:description" content="Derrick Jackson is a progressive leader in the criminal legal system. As the Director of Community Engagement for the Washtenaw County Sheriff's Office, he has spent the last 14-years designing and implementing systems that transform traditional policing strategies. As a certified law enforcement officer with a background in social work, Derrick knows what it means to implement restorative and rehabilitative practices, while keeping our community safe.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="http://jackson4sheriff.com">
+   
+    <title>Derrick Jackson 4 Sheriff</title>
+   
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3d0b5d6c08.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
  
- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'><link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
 
-  <script src="https://kit.fontawesome.com/3d0b5d6c08.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js'></script>
+    <!--==============================
+      Header Area
+      ==============================-->
+    {{> header }}
 
+    <!--==============================
+      Moible Menu
+      ==============================-->
+    <div class="mobile-nav">
+      <span onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+    </div>
 
-    <script>
-      let areClipPathShapesSupported = function () {
-
-  let base = 'clipPath',
-  prefixes = ['webkit', 'moz', 'ms', 'o'],
-  properties = [base],
-  testElement = document.createElement('testelement'),
-  attribute = 'polygon(50% 0%, 0% 100%, 100% 100%)';
-
-  // Push the prefixed properties into the array of properties.
-  for (let i = 0, l = prefixes.length; i < l; i++) {
-    let prefixedProperty = prefixes[i] + base.charAt(0).toUpperCase() + base.slice(1); // remember to capitalize!
-    properties.push(prefixedProperty);
-  }
-
-  // Interate over the properties and see if they pass two tests.
-  for (let i = 0, l = properties.length; i < l; i++) {
-    let property = properties[i];
-
-    // First, they need to even support clip-path (IE <= 11 does not)...
-    if (testElement.style[property] === '') {
-
-      // Second, we need to see what happens when we try to create a CSS shape...
-      testElement.style[property] = attribute;
-      if (testElement.style[property] !== '') {
-        return true;
-      }
-    }
-  }
-
-  return false;
-};
-
-$(() => {
-  let defaultSlickSpeed = 300;
-
-  $('.views').
-  slick({
-    speed: defaultSlickSpeed }).
-
-  on('beforeChange', (evt, slick, currentSlide, nextSlide) => {
-    let delta = Math.abs(currentSlide - nextSlide);
-    if (delta === slick.slideCount - 1) {
-      delta = 1;
-    }
-    $('.views').slick('slickSetOption', 'speed', delta * defaultSlickSpeed);
-  }).
-  on('afterChange', (evt, slick, currentSlide) => {
-    $('.views').slick('slickSetOption', 'speed', defaultSlickSpeed);
-
-    $('.timeline__list').find('.timeline__item--active').removeClass('timeline__item--active');
-    $('.timeline__list').find(`.timeline__item:nth-child(${currentSlide + 1})`).addClass('timeline__item--active');
-  });
-
-  $('.timeline__link').on('click', evt => {
-    evt.preventDefault();
-    $('.timeline__item--active').removeClass('timeline__item--active');
-    $(evt.currentTarget).parent().addClass('timeline__item--active');
-
-    $('.views').slick('slickGoTo', $(evt.currentTarget).parent().prevAll('li').length);
-
-  });
-
-  let timelineOffset = $('.timeline').offset().left;
-  let triangleWidth = $('.timeline__path__triangle--moving').outerWidth();
-
-  $('.timeline').on('mousemove', evt => {
-    let value = evt.pageX - timelineOffset - triangleWidth / 2;
-    $('.timeline__path__triangle--moving').css({
-      transform: `translateX(${value}px)` });
-
-  });
-
-  if (!areClipPathShapesSupported()) {
-    $('body').addClass('no-clippath');
-  } else {
-    $('body').addClass('clippath');
-  }
-
-});
-    </script>
-</head>
-
-<body>
-  {{> modal }}
-  {{> navigation }}
-
-  {{> masthead }}
-
-  {{> mailing_list}}
-
-  <div class="">
-      {{{body}}}
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
+    {{> mobile-drawer}}
 
 
+    {{{body}}}
 
-</body>
+    <!--==============================
+    Footer Area
+    ==============================-->
+    
+    {{> footer }}
 
+
+    <!-- Scroll Top Top Button -->
+    {{!-- <a href="#" class="scrollToTop icon-btn bg-theme"><i class="fa fa-arrow-up"></i></a> --}}
+    <!--==============================
+      All Js File
+      ============================== -->
+    <script src="./js/main.js"></script>
+  </body>
 </html>

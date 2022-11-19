@@ -1,61 +1,167 @@
 .mailing-list {
   position: relative;
-  padding: 1rem;
-  background-color: var(--yellow);
+  background-color: #185e85;
   width: 100%;
-  color: var(--blue); }
-  .mailing-list--content {
-    max-width: 920px;
+  color: #fff;
+  display: flex; }
+  @media (max-width: 992px) {
+    .mailing-list {
+      padding-bottom: 2rem; } }
+  .mailing-list--container {
+    position: relative;
+    max-width: 1640px;
     margin: 0 auto;
+    padding: 3rem 2rem;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; }
-    .mailing-list--content--copy {
-      margin-right: 2rem; }
-    .mailing-list--content h2 {
-      font-size: 1.75vw;
-      margin-right: 1rem;
-      margin-bottom: 0;
-      line-height: 1; }
-    .mailing-list--content p {
-      font-size: 1.025vw;
-      margin-bottom: 0; }
-    .mailing-list--content form {
-      display: flex; }
-      .mailing-list--content form input {
-        margin-right: 1rem; }
-    .mailing-list--content input[type="text"],
-    .mailing-list--content input[type="date"],
-    .mailing-list--content input[type="datetime"],
-    .mailing-list--content input[type="email"],
-    .mailing-list--content input[type="number"],
-    .mailing-list--content input[type="search"],
-    .mailing-list--content input[type="time"],
-    .mailing-list--content input[type="url"],
-    .mailing-list--content textarea,
-    .mailing-list--content select {
-      font-family: 'News Cycle', sans-serif;
-      font-weight: 800;
-      color: #ffffff;
-      border-width: 2px 2px 2px 2px;
-      border-style: solid;
-      border-color: rgba(255, 255, 255, 0.5);
-      border-radius: 5px;
-      padding: 10px 15px 10px 15px;
-      transition: .35s;
-      background: transparent; }
-    .mailing-list--content input[type="text"]:focus,
-    .mailing-list--content input[type="date"]:focus,
-    .mailing-list--content input[type="datetime"]:focus,
-    .mailing-list--content input[type="email"]:focus,
-    .mailing-list--content input[type="number"]:focus,
-    .mailing-list--content input[type="search"]:focus,
-    .mailing-list--content input[type="time"]:focus,
-    .mailing-list--content input[type="url"]:focus,
-    .mailing-list--content textarea:focus,
-    .mailing-list--content select:focus {
-      background: #d2d9dd; }
-    .mailing-list--content input[type="submit"],
-    .mailing-list--content input[type="button"] {
-      font-family: 'Barlow Condensed', sans-serif; }
+    justify-content: end; }
+    @media (max-width: 1200px) {
+      .mailing-list--container {
+        flex-direction: column;
+        margin: 0;
+        padding: 2rem 1rem; } }
+    .mailing-list--container .fieldset {
+      display: flex;
+      gap: 12px; }
+      @media (max-width: 992px) {
+        .mailing-list--container .fieldset {
+          flex-direction: column; } }
+      @media (max-width: 992px) {
+        .mailing-list--container .fieldset input {
+          margin-top: 0; } }
+      .mailing-list--container .fieldset > div {
+        width: 100%; }
+    .mailing-list--container .fieldset2 {
+      margin-bottom: 0 !important; }
+    .mailing-list--container .left {
+      position: absolute;
+      max-width: 680px;
+      width: 45%;
+      left: 7%; }
+      @media (max-width: 1700px) {
+        .mailing-list--container .left {
+          left: 5%;
+          top: 1vw; } }
+      @media (max-width: 1200px) {
+        .mailing-list--container .left {
+          position: relative;
+          width: 100%;
+          max-width: none;
+          left: 0; } }
+      .mailing-list--container .left-container {
+        position: relative;
+        background: #d63f53;
+        color: #fffcf3;
+        border-radius: 20px;
+        padding: 50px 72px;
+        margin-top: 16%; }
+        @media (max-width: 1200px) {
+          .mailing-list--container .left-container {
+            margin-top: 0;
+            padding: 27px 35px; } }
+      .mailing-list--container .left label {
+        margin-bottom: .25rem;
+        display: block;
+        font-family: Open Sans; }
+        .mailing-list--container .left label span {
+          font-size: 12px; }
+    .mailing-list--container .right {
+      width: 75%; }
+      @media (max-width: 1200px) {
+        .mailing-list--container .right {
+          position: relative;
+          width: 100%;
+          max-width: none; } }
+      @media (max-width: 992px) {
+        .mailing-list--container .right {
+          display: none; } }
+      .mailing-list--container .right img {
+        border-radius: 20px;
+        -webkit-box-shadow: 0 24px 48px -12px rgba(37, 14, 75, 0.44);
+        box-shadow: 0 24px 48px -12px rgba(37, 14, 75, 0.44); }
+  .mailing-list--inner--copy p, .mailing-list #success--copy p {
+    margin-bottom: 0 !important;
+    line-height: 1.5; }
+  @media (max-width: 992px) {
+    .mailing-list--inner form, .mailing-list #success form {
+      flex-direction: column;
+      width: 100%; }
+      .mailing-list--inner form input, .mailing-list #success form input {
+        margin-right: 0;
+        margin-top: .5rem; } }
+  .mailing-list--inner h2, .mailing-list #success h2 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+    line-height: 1.15;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; }
+    @media (max-width: 992px) {
+      .mailing-list--inner h2, .mailing-list #success h2 {
+        font-size: 26px; } }
+  .mailing-list--inner p, .mailing-list #success p {
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 1.4; }
+  .mailing-list--inner #fname, .mailing-list #success #fname {
+    margin-right: 1rem; }
+  .mailing-list--inner input[type="text"],
+  .mailing-list--inner input[type="date"],
+  .mailing-list--inner input[type="datetime"],
+  .mailing-list--inner input[type="email"],
+  .mailing-list--inner input[type="number"],
+  .mailing-list--inner input[type="search"],
+  .mailing-list--inner input[type="time"],
+  .mailing-list--inner input[type="url"],
+  .mailing-list--inner textarea,
+  .mailing-list--inner select, .mailing-list #success input[type="text"],
+  .mailing-list #success input[type="date"],
+  .mailing-list #success input[type="datetime"],
+  .mailing-list #success input[type="email"],
+  .mailing-list #success input[type="number"],
+  .mailing-list #success input[type="search"],
+  .mailing-list #success input[type="time"],
+  .mailing-list #success input[type="url"],
+  .mailing-list #success textarea,
+  .mailing-list #success select {
+    font-family: Open Sans;
+    font-weight: 800;
+    color: #ffffff;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    transition: .35s;
+    width: 100%;
+    background: transparent;
+    box-sizing: border-box; }
+  .mailing-list--inner input[type="submit"],
+  .mailing-list--inner input[type="button"], .mailing-list #success input[type="submit"],
+  .mailing-list #success input[type="button"] {
+    margin-top: 2rem;
+    border-style: none;
+    font-family: Open Sans;
+    font-size: 18px;
+    width: 100%;
+    background: #185e85;
+    text-align: center;
+    padding: 12px 24px;
+    color: #fffcf3;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 7px; }
+    .mailing-list--inner input[type="submit"]:hover,
+    .mailing-list--inner input[type="button"]:hover, .mailing-list #success input[type="submit"]:hover,
+    .mailing-list #success input[type="button"]:hover {
+      background: #11435d; }
+  .mailing-list #error {
+    margin-bottom: 1rem;
+    font-family: Open Sans;
+    font-size: 14px; }
+  .mailing-list #success {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 37%;
+    left: 0%;
+    padding: 0 4rem; }

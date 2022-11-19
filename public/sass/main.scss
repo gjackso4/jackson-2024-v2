@@ -2,11 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
 
-@import './_partials/reset.scss';
-@import './_partials/base.scss';
-@import './_partials/navigation.scss';
-@import './_partials/masthead.scss';
-@import './_partials/mailing-list.scss';
-@import './_partials/timeline.scss';
-@import './_partials/style.scss';
+@import '_partials/reset.scss';
+@import '_partials/base.scss';
+@import '_partials/style.scss';
+@import '_partials/animations.scss';
+@import '_partials/modal.scss';
+@import '_partials/navigation.scss';
+
+@import '_partials/masthead.scss';
+@import '_partials/mailing-list.scss';
+@import '_partials/about.scss';
+@import '_partials/meet-derrick.scss';
+@import '_partials/things-done.scss';
+@import '_partials/take-action.scss';
+@import '_partials/why-running.scss';
+@import '_partials/achievements.scss';
+@import '_partials/donate-widget.scss';
+@import '_partials/endorsements.scss';
+@import '_partials/footer.scss';

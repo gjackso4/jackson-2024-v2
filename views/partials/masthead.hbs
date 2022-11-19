@@ -1,35 +1,36 @@
-<div class="masthead">
-  <div class="text-block">
-    <h2>TOGETHER, WE <br> WILL DREAM BIG <br> AND FIGHT HARD</h2>
-    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</span>
-  </div>
+<div class="masthead-container">
+  <div class="masthead">
+    <div class="text-block">
+      <div class="line-blocks">
 
-  <div class="watch">
-    <span>Meet Derrick</span>
-    <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/wK8glFZuQw8" data-target="#myModal">Watch <i class="fas fa-play-circle" aria-hidden="true"></i></a>
-  </div>
+        <p>Democrat For Sheriff</p>
 
-  <img src="./images/masthead.jpg">
+        <div class="lines">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+
+      </div>
+      <h2>Derrick Jackson</h2>
+      <span>Candidate for Washtenaw County Sheriff. WCSO Director. Police Officer. Social Worker. Husband. Father. Progressive leader and proven reformer.</span>
+
+      <ul class="social">
+        <a href="https://www.facebook.com/profile.php?id=100086252263756" target="_blank"><i class="fa fa-facebook-square "></i></a>
+        <a href="https://twitter.com/dirjackson" target="_blank"><i class="fa fa-twitter-square "></i></a>
+        <a href="https://www.youtube.com/channel/UC6jGzqaxLRoN34R89-3XtxA" target="_blank"><i class="fa fa-youtube-square"></i></a>
+        <a href="https://www.instagram.com/jackson4sheriff/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>               
+      </ul>
+    </div>
+
+    <div class="watch">
+      <span>What's Possible</span>
+      <a class="video-btn modal-btn">Watch <div class="video-play-button"><span></span></div></a>
+      
+    </div>
+
+    <img class="desktop-only" src="./images/masthead-v4.jpg">
+    <img class="mobile-only" src="./images/masthead-v3-m.jpg">
+
+  </div>
 </div>
-
-<script>
-  $(document).ready(function() {
-
-  // Gets the video src from the data-src on each button
-
-  var $videoSrc;  
-  $('.video-btn').click(function() {
-      $videoSrc = $(this).data( "src" );
-      $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-      $(".modal").addClass('show').show();
-  });
-
-  $('.close, .modal').click(function(){
-    $("#video").attr('src', '');
-    $(".modal").removeClass('show').hide();
-  });
-
-// document ready  
-});
-
-</script>

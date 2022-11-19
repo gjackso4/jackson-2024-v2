@@ -1,0 +1,138 @@
+.about {
+  background-color: #185e85;
+  color: #fff; }
+  .about-container {
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: flex-start; }
+    @media (max-width: 992px) {
+      .about-container {
+        flex-direction: column;
+        padding: 0rem 1rem 3rem 1rem; } }
+    .about-container .left, .about-container .right {
+      position: relative;
+      width: 50%; }
+      @media (max-width: 992px) {
+        .about-container .left, .about-container .right {
+          width: 100%; } }
+    .about-container .left {
+      width: 45%; }
+      @media (max-width: 992px) {
+        .about-container .left {
+          width: 100%; } }
+    .about-container .right {
+      margin-top: 16%;
+      margin-left: 5%; }
+      @media (max-width: 1400px) {
+        .about-container .right {
+          margin-top: 10vw;
+          margin-left: 2vw; } }
+      @media (max-width: 992px) {
+        .about-container .right {
+          margin-left: 0; } }
+    .about-container .about-collage {
+      position: relative; }
+      .about-container .about-collage .image-1 {
+        max-width: 494px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 11.5vw auto 12.5vw;
+        z-index: 3;
+        position: relative;
+        -webkit-box-shadow: 0 24px 48px -12px rgba(37, 14, 75, 0.44);
+        box-shadow: 0 24px 48px -12px rgba(37, 14, 75, 0.44);
+        width: 25.75vw; }
+        @media (max-width: 992px) {
+          .about-container .about-collage .image-1 {
+            width: 43.75vw;
+            margin: 8.5vw auto 8.5vw; } }
+      .about-container .about-collage .image-2, .about-container .about-collage .image-4, .about-container .about-collage .image-5, .about-container .about-collage .image-6 {
+        max-width: 369px;
+        border-radius: 12px;
+        overflow: hidden;
+        -webkit-box-shadow: 0 24px 48px -12px rgba(37, 14, 75, 0.44);
+        box-shadow: 0 24px 48px -12px rgba(37, 14, 75, 0.44);
+        width: 19.25vw; }
+        @media (max-width: 992px) {
+          .about-container .about-collage .image-2, .about-container .about-collage .image-4, .about-container .about-collage .image-5, .about-container .about-collage .image-6 {
+            width: 38.25vw; } }
+      .about-container .about-collage .image-2 {
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .about-container .about-collage .image-4 {
+        position: absolute;
+        top: 4%;
+        left: 18vw;
+        z-index: 2; }
+        @media (max-width: 992px) {
+          .about-container .about-collage .image-4 {
+            right: 0;
+            left: auto; } }
+      .about-container .about-collage .image-5 {
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        z-index: 2; }
+      .about-container .about-collage .image-6 {
+        position: absolute;
+        bottom: 0%;
+        left: 17vw;
+        z-index: 2; }
+        @media (max-width: 992px) {
+          .about-container .about-collage .image-6 {
+            right: 0;
+            left: auto; } }
+    .about-container .meet-vert {
+      font-family: 'Nanum Gothic';
+      width: 1em;
+      text-align: center;
+      text-transform: uppercase;
+      word-break: break-all;
+      white-space: pre-wrap;
+      line-height: 1.25;
+      position: absolute;
+      top: 5px;
+      left: -41px;
+      font-size: 22px;
+      font-weight: 800; }
+      @media (max-width: 992px) {
+        .about-container .meet-vert {
+          left: auto; } }
+    .about-container .meet-name {
+      font-family: 'Nanum Gothic';
+      font-size: 58px;
+      font-weight: bold;
+      letter-spacing: 2px; }
+      @media (max-width: 992px) {
+        .about-container .meet-name {
+          margin-left: 35px; } }
+  .about p {
+    line-height: 1.75;
+    font-size: 18px;
+    margin-top: 1.5rem; }
+  .about .icon-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 1.75rem;
+    display: inline-block; }
+    .about .icon-link:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 3px;
+      background-color: transparent;
+      margin-top: 2px; }
+    .about .icon-link:hover:after {
+      content: "";
+      display: block;
+      width: 100%;
+      background: var(--yellow);
+      height: 3px;
+      transition: width 0.3s ease 0s; }
+    .about .icon-link .fa-solid {
+      margin-left: 0.5rem; }
