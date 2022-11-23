@@ -22,7 +22,9 @@ section {
   * {
     font-family: Open Sans;
   }
-
+	a {
+		color:  #ffffff;
+	}
   &--inner {
     max-width: 1500px;
     margin:0 auto;
@@ -70,7 +72,8 @@ section {
 	margin: 20px 0 12px;
 	padding: 0;
   width: 75%;
-
+	font-size: 14px;
+	
   @media (max-width: 992px) {
     width: 100%;
   }

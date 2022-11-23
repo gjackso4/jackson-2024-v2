@@ -7,16 +7,17 @@
 
     <p>For over twenty years, Derrick has dedicated his life to helping others. Now, he’s asking for our help. Join the movement!</p>
 
-    <p id="error" class="error">Error: Please enter an email Address.</p>
+    <p id="error" class="error">Error: Please complete all reqired fields.</p>
+
     <form id="take-action-form" action="/subscribe" method="POST">
       
 
 <div class="name">
-        <label>Name <span></span></label>
-        <input type="text" name="fname" id="fname" >
+        <label>Name <span>*</span></label>
+        <input type="text" name="fname" id="fname" required>
       </div> 
 <div class="email">
-      <label>Email <span></span></label>
+      <label>Email <span>*</span></label>
       <input type="email" name="email" id="email" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
 </div>
 
@@ -118,7 +119,7 @@
       </div>
       <div>
             <input type="checkbox" id="chkphonecalls" class="checkbox" name="chkphonecalls" value="false">
-            <label for="chkphonecalls">Make phone calls to votes</label><br>
+            <label for="chkphonecalls">Make phone calls to voters</label><br>
       </div>
     </div>
     <div class="checkbox-set set2">
@@ -168,6 +169,16 @@
   let error = document.getElementById('error');
   let success = document.getElementById('success');
   let signup = document.getElementById('take-action-form');
+
+
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var getName = url.searchParams.get("name");
+  var getEmail = url.searchParams.get("email");
+
+  document.getElementById('fname').value = getName;
+  document.getElementById('email').value = getEmail;
+
 
   checkboxs.forEach(checkbox => {
     checkbox.addEventListener('change', function() {

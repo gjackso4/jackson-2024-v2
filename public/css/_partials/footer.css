@@ -19,6 +19,8 @@ section {
   border-top: 3px solid var(--yellow); }
   .footer-distributed * {
     font-family: Open Sans; }
+  .footer-distributed a {
+    color: #ffffff; }
   .footer-distributed--inner {
     max-width: 1500px;
     margin: 0 auto;
@@ -53,7 +55,8 @@ section {
   color: #ffffff;
   margin: 20px 0 12px;
   padding: 0;
-  width: 75%; }
+  width: 75%;
+  font-size: 14px; }
   @media (max-width: 992px) {
     .footer-distributed .footer-links {
       width: 100%; } }

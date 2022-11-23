@@ -8,14 +8,16 @@
     background-position: bottom;
   
     @media (max-width: 992px) {
-      padding: 5rem 2rem;
+      padding: 4rem 2rem;
+      background-image: none;
     }
 
     .left {
-      width: 55%;
+      width: 43vw;
 
       @media (max-width: 992px) {
         width: 100%;
+      
       }
     
       a {

@@ -7,9 +7,10 @@
   background-position: bottom; }
   @media (max-width: 992px) {
     .meet-derrick--container {
-      padding: 5rem 2rem; } }
+      padding: 4rem 2rem;
+      background-image: none; } }
   .meet-derrick--container .left {
-    width: 55%; }
+    width: 43vw; }
     @media (max-width: 992px) {
       .meet-derrick--container .left {
         width: 100%; } }

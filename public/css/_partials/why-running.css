@@ -2,11 +2,12 @@
   position: relative;
   width: 100%;
   color: #fff;
-  display: flex; }
+  display: flex;
+  background-color: #fbfbfb; }
   @media (max-width: 992px) {
     .why-running {
-      padding-bottom: 2rem;
-      margin-top: -48vw; } }
+      margin-top: -48vw;
+      background-color: transparent; } }
   .why-running--container {
     position: relative;
     margin: 0 auto;
@@ -15,11 +16,19 @@
     justify-content: start;
     background-image: url("../images/join_movement_v3.jpg");
     background-size: cover; }
+    @media (max-width: 1480px) {
+      .why-running--container {
+        background-repeat: no-repeat;
+        background-position: 3% bottom;
+        background-size: 111vw; } }
     @media (max-width: 1200px) {
       .why-running--container {
         flex-direction: column-reverse;
         margin: 0;
         padding: 0; } }
+    @media (max-width: 992px) {
+      .why-running--container {
+        background-image: none; } }
     .why-running--container .sig {
       font-family: 'Allison', cursive;
       font-size: 4rem;
@@ -37,14 +46,16 @@
       @media (max-width: 992px) {
         .why-running--container .left {
           width: 100%;
-          padding: 2rem;
+          padding: 0 2rem 2rem 2rem;
           margin-left: 0; } }
       .why-running--container .left-container {
         position: relative;
         color: #363636;
-        margin-top: 12%; }
+        margin-top: 12%;
+        padding-bottom: 5%; }
         @media (max-width: 992px) {
           .why-running--container .left-container {
+            margin-top: 6%;
             padding: 0; } }
       .why-running--container .left label {
         margin-bottom: .25rem;

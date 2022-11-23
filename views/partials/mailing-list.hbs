@@ -9,11 +9,11 @@
         </div>
 
         <form action="/subscribe" method="POST">
-          <p id="error" class="error">Error: Please enter an email Address</p>
+          <p id="error" class="error">Error: Please complete all fields.</p>
           <div class="fieldset">
             <div>
-              <label>Name <span>(optional)</span></label>
-              <input type="text" name="fName" id="fname" >
+              <label>Name</label>
+              <input type="text" name="fName" id="fname2" required>
             </div>
             <div>
               <label>Email address</label>
@@ -27,7 +27,7 @@
       </div>
 
       <div id="success">
-        <p>Confirmation Email is on the way.<br><br>Find more ways to <a href="/take-action">help</a> elect Derrick Jackson Sheriff of Washtenaw County.</p>
+        <p>Confirmation Email is on the way.<br><br>Find more ways to <a id="successLink" href="/take-action">help</a> elect Derrick Jackson Sheriff of Washtenaw County.</p>
       </div>
      </div>
     </div>
@@ -41,19 +41,23 @@
 <script>
   let cta = document.getElementById('cta');
   let email = document.getElementById('email').value;
+  let name2 = document.getElementById('fname2');
   let error = document.getElementById('error');
   let success = document.getElementById('success');
   let signup = document.getElementById('mailing-list--inner');
-
+  let successLink = document.getElementById('successLink');
+  
   cta.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (this.email.value == null || this.email.value == "") {
+    if (this.email.value == null || this.email.value == "" || this.fname2.value == "" || this.fname2.value == null) {
       error.classList.add('errorAnim');
     } else {
+      successLink.href = `/take-action?email=${this.email.value}&name=${this.fname2.value}`
+
       let fetchData = {
         method: 'POST',
-        body: JSON.stringify({email: this.email.value}),
+        body: JSON.stringify({email: this.email.value, name: this.fname2.value}),
         headers: {"Content-Type": "application/json"}
       }
 

@@ -503,7 +503,7 @@ nav {
     color: #fff;
     font-size: 26px;
     top: 53%;
-    left: 60vw;
+    left: 59vw;
     line-height: .9;
     padding-right: 1rem; }
     @media (max-width: 1200px) {
@@ -934,9 +934,10 @@ nav {
   background-position: bottom; }
   @media (max-width: 992px) {
     .meet-derrick--container {
-      padding: 5rem 2rem; } }
+      padding: 4rem 2rem;
+      background-image: none; } }
   .meet-derrick--container .left {
-    width: 55%; }
+    width: 43vw; }
     @media (max-width: 992px) {
       .meet-derrick--container .left {
         width: 100%; } }
@@ -1370,11 +1371,12 @@ nav {
   position: relative;
   width: 100%;
   color: #fff;
-  display: flex; }
+  display: flex;
+  background-color: #fbfbfb; }
   @media (max-width: 992px) {
     .why-running {
-      padding-bottom: 2rem;
-      margin-top: -48vw; } }
+      margin-top: -48vw;
+      background-color: transparent; } }
   .why-running--container {
     position: relative;
     margin: 0 auto;
@@ -1383,11 +1385,19 @@ nav {
     justify-content: start;
     background-image: url("../images/join_movement_v3.jpg");
     background-size: cover; }
+    @media (max-width: 1480px) {
+      .why-running--container {
+        background-repeat: no-repeat;
+        background-position: 3% bottom;
+        background-size: 111vw; } }
     @media (max-width: 1200px) {
       .why-running--container {
         flex-direction: column-reverse;
         margin: 0;
         padding: 0; } }
+    @media (max-width: 992px) {
+      .why-running--container {
+        background-image: none; } }
     .why-running--container .sig {
       font-family: 'Allison', cursive;
       font-size: 4rem;
@@ -1405,14 +1415,16 @@ nav {
       @media (max-width: 992px) {
         .why-running--container .left {
           width: 100%;
-          padding: 2rem;
+          padding: 0 2rem 2rem 2rem;
           margin-left: 0; } }
       .why-running--container .left-container {
         position: relative;
         color: #363636;
-        margin-top: 12%; }
+        margin-top: 12%;
+        padding-bottom: 5%; }
         @media (max-width: 992px) {
           .why-running--container .left-container {
+            margin-top: 6%;
             padding: 0; } }
       .why-running--container .left label {
         margin-bottom: .25rem;
@@ -1618,7 +1630,7 @@ nav {
     padding: 0 3rem 3rem 3rem;
     text-align: center;
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.4;
     max-width: 1000px;
     margin: 0 auto 4rem auto;
     border-bottom: 1px solid #d7d5d2; }
@@ -1764,6 +1776,8 @@ section {
   border-top: 3px solid var(--yellow); }
   .footer-distributed * {
     font-family: Open Sans; }
+  .footer-distributed a {
+    color: #ffffff; }
   .footer-distributed--inner {
     max-width: 1500px;
     margin: 0 auto;
@@ -1798,7 +1812,8 @@ section {
   color: #ffffff;
   margin: 20px 0 12px;
   padding: 0;
-  width: 75%; }
+  width: 75%;
+  font-size: 14px; }
   @media (max-width: 992px) {
     .footer-distributed .footer-links {
       width: 100%; } }

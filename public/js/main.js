@@ -10,26 +10,26 @@ function controlVideo(vidFunc) {
 
 
 // Modal
-const modalWrap = document.querySelector('.modal-wrap');
-const modalContent = document.querySelector('.modal-content');
-const modalBtn = document.querySelector('.modal-btn');
-const modalCancel = document.querySelector('.cancel');
-const modalVideo = document.querySelector('.video');
+// const modalWrap = document.querySelector('.modal-wrap');
+// const modalContent = document.querySelector('.modal-content');
+// const modalBtn = document.querySelector('.modal-btn');
+// const modalCancel = document.querySelector('.cancel');
+// const modalVideo = document.querySelector('.video');
 
-modalBtn.addEventListener('click', () => {
-  modalContent.classList.remove("slide-out");
-  modalWrap.classList.toggle("display-none");
-  controlVideo('playVideo');
-});
+// modalBtn.addEventListener('click', () => {
+//   modalContent.classList.remove("slide-out");
+//   modalWrap.classList.toggle("display-none");
+//   controlVideo('playVideo');
+// });
 
-modalCancel.addEventListener('click', () => {
-  modalContent.classList.add("slide-out");
-  controlVideo('stopVideo');
-  modalVideo.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-  setTimeout(() => {
-    modalWrap.classList.toggle("display-none");
-  }, 650)
-});
+// modalCancel.addEventListener('click', () => {
+//   modalContent.classList.add("slide-out");
+//   controlVideo('stopVideo');
+//   modalVideo.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+//   setTimeout(() => {
+//     modalWrap.classList.toggle("display-none");
+//   }, 650)
+// });
 
 /* Open the sidenav */
 function openNav() {
@@ -47,7 +47,7 @@ const sliders = document.querySelectorAll('.slide-in');
 
 
 const appearOptions = {
-  threshold: .25
+  threshold: .15
 };
 
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
